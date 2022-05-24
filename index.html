@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yoyo BST Discourse Table Generator</title>
+  <link rel='stylesheet' href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="table" class="table-editable">
+      <span class="table-add glyphicon glyphicon-plus"></span>
+      <table class="table">
+        <tr>
+          <th>Status</th>
+          <th>Brand</th>
+          <th>Name</th>
+          <th>Color</th>
+          <th>Condition</th>
+          <th>Price</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <!-- Clonable table line -->
+        <tr class="hide">
+          <td contenteditable>
+            <select id="status" name="status">
+              <option value=":white_check_mark:" selected>✅</option>
+              <option value=":hourglass_flowing_sand:">⏳</option>
+              <option value=":x:">❌</option>
+            </select>
+          </td>
+          <td contenteditable>Brand Name</td>
+          <td contenteditable>Yo-yo Name</td>
+          <td contenteditable>Color</td>
+          <td contenteditable>Short description of condition</td>
+          <td contenteditable>Price</td>
+          <td>
+            <span class="table-remove glyphicon glyphicon-remove"</span>
+          </td>
+          <td>
+            <span class="table-up glyphicon glyphicon-arrow-up"></span>
+            <span class="table-down glyphicon glyphicon-arrow-down"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <button id="load-btn" class="btn btn-primary">Load state</button>
+    <button id="save-btn" class="btn btn-primary">Save state</button>
+    <button id="export-btn" class="btn btn-primary">Generate Markdown</button>
+    <div class="hide" id="markdown">
+      <br />
+      <p>Copy the generated table below and paste it into your new post on YoYoExpert</p>
+      <pre id="export"></pre>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
+  <script src="./script.js"></script>
+</body>

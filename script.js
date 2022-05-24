@@ -115,7 +115,7 @@ function removeRow() {
   row_identifier = $(this).parents('tr').attr('class');
   console.log("removing " + row_identifier);
   $(this).parents('tr').detach();
-  ROW_STATUSES.remove(row_identifier);
+  ROW_STATUSES.delete(row_identifier);
   saveTable();
 }
 
